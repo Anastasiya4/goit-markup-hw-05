@@ -368,7 +368,84 @@ img {
   padding: 10px;
 }
 .link-2 {
+  position: relative;
   text-decoration: none;
+}
+
+.actions {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  display: none;
+  justify-content: space-between;
+  align-items: inherit;
+  flex-wrap: wrap;
+  width: 164px;
+  height: 114px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.actions button {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ffffff;
+}
+
+.like{
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  background-image: url(../images/heart.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #ffffff;
+}
+
+.share{
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  background-color: var(--button-color);
+  background-image: url(../images/shuffle-arrows.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #ffffff;
+}
+
+.clock{
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  background-image: url(../images/watch.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 1px solid #ffffff;
+}
+
+.basket{
+  margin: 0;
+  padding: 0;
+  width: 164px;
+  height: 50px;
+  background-color: #323232;
+  background-image: url(../images/add-to-cart.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  border: 1px solid #ffffff;
+  font-family: var(--font-2);
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.item:hover .actions{
+  display: flex;
 }
 
 .colored {
@@ -460,7 +537,7 @@ background-color: var(--button-color);
   color: var(--grey-2-color);
 }
 
-.button {
+.submition {
   position: absolute;
   top: 0;
   width: 89px;
@@ -480,6 +557,7 @@ background-color: var(--button-color);
 }
 
 .overlay::before {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -487,6 +565,10 @@ background-color: var(--button-color);
   height: 100%;
   content: "";
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.overlay:hover::before{
+  display: block;
 }
 
 main {
