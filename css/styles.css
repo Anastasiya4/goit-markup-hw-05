@@ -134,6 +134,7 @@ a.letter::before {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  margin-left: auto;
 }
 
 .logo {
